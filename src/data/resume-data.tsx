@@ -20,259 +20,197 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Kyle Finken",
+  initials: "KF",
+  location: "Tampa, Florida, USA",
   about:
-    "Full Stack Engineer focused on building products with extra attention to detail",
+    "Recent graduate obsessed with solving problems with software. Currently looking for a full-time position as a Software Engineer.",
   summary:
-    "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+    "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. I'm actively seeking a new team where I can bring my skills to the table and make meaningful contributions. If you're interested in connecting or discussing potential opportunities don't hesitate to reach out!",
+  avatarUrl: "https://media.licdn.com/dms/image/D4E03AQEctLtAYZ6QVQ/profile-displayphoto-shrink_800_800/0/1705878264072?e=1711584000&v=beta&t=kNOWyIFPfIGGJGQn52w5yXhWOBjOQwH9ooVVSBnn50Q",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "kfinken@finkenfive.com",
+    tel: "+19529134362",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/k-finken",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/kyle-finken/",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://twitter.com/KyleFinken",
         icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "University of Florida",
+      degree: "Bachelors of Science in Computer Engineering",
+      start: "2019",
+      end: "2023",
+      gpa: "3.8/4.0"
     },
   ],
   work: [
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: ["Remote"],
-      title: "Senior Full Stack Developer",
+      company: "DataBanc",
+      link: "https://www.mydatabanc.com/",
+      badges: [],
+      title: "Full Stack SWE Intern",
       logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description:
-        "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+      start: "09/2022",
+      end: "Current",
+      description: `• Rapidly advanced from intern to a key contributor, gaining trust and responsibility in full-feature development and high-impact projects, collaborating directly with the CEO on marketing and strategy initiatives.
+      • Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and Docker. Ultimately enabling users to have interactive, data-driven conversations. 
+      • Optimized existing Express.js APIs, achieving 86% faster performance, enhancing user experience, and reducing operational costs
+      • Developed a database security testing suite with Jest. Improving code quality and minimizing vulnerabilities in production`,
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
+      company: "Publix Supermarkets",
+      link: "https://www.publix.com/",
+      badges: [],
+      title: "Software Engineering Intern",
       logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description:
-        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
+      start: "05/2022",
+      end: "08/2022",
+      description: `• Spearheaded the development of a trending search feature, tripling specific search term usage and benefiting over 30,000 users.
+      • Implemented new API enhancements enabling the promotion of select products on search result pages, utilizing Vue.js and .NET, resulting in a 10% increase in user search engagement. 
+      • Composed extensive A/B tests on new features using Adobe Analytics and Optimizely to refine user engagement and conversion rates.`,
     },
     {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
+      company: "Publix Supermarkets",
+      link: "https://www.publix.com/",
       badges: [],
-      title: "Android Developer → Lead Android Developer",
+      title: "Software Engineering Intern",
       logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description:
-        "Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress",
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: [],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description: "Creating and testing software for LTE base stations",
+      start: "05/2021",
+      end: "08/2021",
+      description: `• Revamped .NET APIs using C# to integrate advanced fallback search logic, decreasing no-result landing
+      pages by 64%.
+      • Collaborated with the UX/UI team to expand the existing Storybook component explorer system. 
+      • Implemented regression testing suites with Selenium that were run following deployments.`,
     },
   ],
-  skills: [
+  languages: [
     "JavaScript",
     "TypeScript",
-    "React/Next.js/Remix",
+    "C++",
+    "C#",
+    "Java",
+    "Python",
+    "SQL",
+  ],
+  skills: [
+    "React/Next.js/Gatsby",
     "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Express.js",
+    ".NET",
+    "PostgreSQL",
+    "TailwindCSS",
+    "Jest",
+    "Prisma",
+    "Flask",
+    "Puppeteer",
+    "Docker",
+    "Vue.js",
+    "Langchain",
+    "MySQL",
+    "PyTorch",
+  ],
+  tools: [
+    "Google Cloud Platform",
+    "Firebase",
+    "Docker",
+    "Git",
+    "GitHub",
+    "Azure DevOps",
+    "Postman",
+    "Linux",
+    "Adobe Analytics",
+    "Storybook",
   ],
   projects: [
     {
-      title: "Consultly",
+      title: "DataBanc",
       techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
+        "Javascript",
+        "Gatsby",
+        "TailwindCSS",
+        "Docker",
+        "PostgreSQL",
+        "Firebase",
+        "Langchain",
       ],
-      description: "A platform to build and grow your online business",
+      description: "Data privacy and security platform for consumers to control, use, and monetize their data.",
       logo: ConsultlyLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "mydatabanc.com",
+        href: "https://www.mydatabanc.com/",
       },
     },
     {
-      title: "Monito",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
-      description:
-        "Browser extension that records everything happening in a web application",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Jarocki.me",
-      techStack: ["Side Project", "Next.js", "MDX"],
-      description:
-        "My personal website and blog. Built with Next.js and Notion API",
-      logo: JarockiMeLogo,
-      link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
-      },
-    },
-    {
-      title: "Minimal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Minimalist calendars, habit trackers and planners generator",
-      logo: Minimal,
-      link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
-      },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Parabol",
+      title: "LeetBattle",
       techStack: [
-        "Full Stack Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
+        "Typescript",
+        "TRPC",
+        "Next.js",
+        "TailwindCSS",
+        "Prisma",
+        "MySQL",
       ],
-      description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: ParabolLogo,
-      link: {
-        label: "github.com",
-        href: "https://parabol.co/",
-      },
+      description: "Competitive programming platform for students to practice and compete against each other.",
+      logo: ConsultlyLogo,
     },
     {
-      title: "Evercast",
+      title: "Gatornetics",
       techStack: [
-        "Lead Frontend Developer",
-
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
+        "Javascript",
+        "Next.js",
+        "TailwindCSS",
+        "Docker",
+        "MySQL",
+        "Flask",
+        "PyTorch",
       ],
-      description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: EvercastLogo,
+      description: "College football analytics and prediction application.",
+      logo: ConsultlyLogo,
       link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
+        label: "gatornetics.com",
+        href: "https://gatornetics.vercel.app/",
       },
     },
     {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
+      title: "ClimateSmart",
+      techStack: [
+        "Javascript",
+        "Next.js",
+        "TailwindCSS",
+        "Firebase",
+      ],
+      description: "Tool for students to interactively learn about climate change.",
+      logo: ConsultlyLogo,
       link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
+        label: "ClimateSmart.com",
+        href: "https://climate-smart.vercel.app/",
       },
     },
     {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
+      title: "Motion Based Tetris",
+      techStack: ["Python", "Mediapipe", "Opencv", "Pygame", "Tensorflow"],
       description:
-        "Howdy is a place for you to join communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
+        "Tetris implementation using real-time hand tracking and gesture recognition.",
       logo: CDGOLogo,
+      link: {
+        label: "Motion Based Tetris",
+        href: "https://github.com/k-finken/Motion-Based-Tetris/tree/main",
+      },
     },
   ],
 } as const;

@@ -1,7 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
@@ -18,15 +17,18 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+        <span className="block sm:hidden -mb-5 mt-3">
+          <h1 className="text-5xl font-bold">{RESUME_DATA.name}</h1>
+        </span>
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+            <h1 className="text-3xl sm:text-5xl font-bold hidden sm:block">{RESUME_DATA.name}</h1>
+            <p className="max-w-md text-pretty font-mono text-sm sm:text-lg text-muted-foreground">
               {RESUME_DATA.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                className="inline-flex gap-x-1.5 align-baseline leading-none"
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
@@ -87,7 +89,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="size-40">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -131,7 +133,7 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
+                <CardContent className="mt-2 text-xs whitespace-pre-line">
                   {work.description}
                 </CardContent>
               </Card>
@@ -154,15 +156,32 @@ export default function Page() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2">GPA: {education.gpa}</CardContent>
               </Card>
             );
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">Languages</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.languages.map((language) => {
+              return <Badge key={language}>{language}</Badge>;
+            })}
+          </div>
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Frameworks and Libraries</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
+            })}
+          </div>
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Tools</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.tools.map((tool) => {
+              return <Badge key={tool}>{tool}</Badge>;
             })}
           </div>
         </Section>
@@ -183,20 +202,12 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <Section className="print-force-new-page scroll-mb-16">
+          <div className="flex justify-center items-center">
+            <h2 className="text-xs ">© 2024 Kyle Finken</h2>
+          </div>
+        </Section>
       </section>
-
-      <CommandMenu
-        links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-      />
     </main>
   );
 }
