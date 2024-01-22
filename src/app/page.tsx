@@ -16,61 +16,61 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-5xl space-y-8 bg-white print:space-y-6">
         <span className="block sm:hidden -mb-5 mt-3">
           <h1 className="text-5xl font-bold">{RESUME_DATA.name}</h1>
         </span>
         <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
-            <h1 className="text-3xl sm:text-5xl font-bold hidden sm:block">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm sm:text-lg text-muted-foreground">
+          <div className="flex-1 space-y-2">
+            <h1 className="text-3xl sm:text-8xl font-bold hidden sm:block">{RESUME_DATA.name}</h1>
+            <p className="max-w-lg text-pretty font-mono text-sm sm:text-2xl text-muted-foreground">
               {RESUME_DATA.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="max-w-md items-center text-pretty font-mono text-xs sm:text-lg text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none"
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
-                <GlobeIcon className="size-3" />
+                <GlobeIcon className="size-3 sm:size-4" />
                 {RESUME_DATA.location}
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="size-8"
+                  className="size-8 sm:size-12"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
+                    <MailIcon className="size-4 sm:size-6" />
                   </a>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.tel ? (
                 <Button
-                  className="size-8"
+                  className="size-8 sm:size-12"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
+                    <PhoneIcon className="size-4 sm:size-6" />
                   </a>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="size-8"
+                  className="size-8 sm:size-12"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={social.url}>
-                    <social.icon className="size-4" />
+                    <social.icon className="size-4 sm:size-6" />
                   </a>
                 </Button>
               ))}
@@ -89,24 +89,24 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-40">
+          <Avatar className="size-40 sm:size-80">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
+          <h2 className="text-xl sm:text-3xl font-bold">About</h2>
+          <p className="text-pretty font-mono text-sm sm:text-lg text-muted-foreground">
             {RESUME_DATA.summary}
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="text-xl sm:text-3xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex items-center justify-between gap-x-2 text-base sm:text-xl">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a className="hover:underline" href={work.link}>
                         {work.company}
@@ -116,7 +116,7 @@ export default function Page() {
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
-                            className="align-middle text-xs"
+                            className="align-middle text-xs sm:text-xl"
                             key={badge}
                           >
                             {badge}
@@ -124,16 +124,16 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm sm:text-xl tabular-nums text-gray-500">
                       {work.start} - {work.end}
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none">
+                  <h4 className="font-mono sm:text-lg text-sm leading-none">
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs whitespace-pre-line">
+                <CardContent className="mt-2 text-xs sm:text-lg whitespace-pre-line">
                   {work.description}
                 </CardContent>
               </Card>
@@ -141,53 +141,53 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl sm:text-3xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex items-center justify-between gap-x-2 text-base sm:text-xl">
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm sm:text-xl tabular-nums text-gray-500">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-                <CardContent className="mt-2">GPA: {education.gpa}</CardContent>
+                <CardContent className="mt-2 sm:text-lg">{education.degree}</CardContent>
+                <CardContent className="mt-2 sm:text-lg">GPA: {education.gpa}</CardContent>
               </Card>
             );
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Languages</h2>
+          <h2 className="text-xl sm:text-2xl font-bold">Languages</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.languages.map((language) => {
-              return <Badge key={language}>{language}</Badge>;
+              return <Badge className="sm:text-sm" key={language}>{language}</Badge>;
             })}
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Frameworks and Libraries</h2>
+          <h2 className="text-xl sm:text-2xl font-bold">Frameworks and Libraries</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+              return <Badge className="sm:text-sm" key={skill}>{skill}</Badge>;
             })}
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Tools</h2>
+          <h2 className="text-xl sm:text-2xl font-bold">Tools</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.tools.map((tool) => {
-              return <Badge key={tool}>{tool}</Badge>;
+              return <Badge className="sm:text-sm" key={tool}>{tool}</Badge>;
             })}
           </div>
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
+          <h2 className="text-xl sm:text-3xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
