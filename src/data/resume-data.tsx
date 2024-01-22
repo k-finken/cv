@@ -184,10 +184,6 @@ export const RESUME_DATA = {
       ],
       description: "College football analytics and prediction application.",
       logo: ConsultlyLogo,
-      link: {
-        label: "gatornetics.com",
-        href: "https://gatornetics.vercel.app/",
-      },
     },
     {
       title: "ClimateSmart",
@@ -200,10 +196,6 @@ export const RESUME_DATA = {
       ],
       description: "Tool for students to interactively learn about climate change.",
       logo: ConsultlyLogo,
-      link: {
-        label: "ClimateSmart.com",
-        href: "https://climate-smart.vercel.app/",
-      },
     },
     {
       title: "Motion Based Tetris",
