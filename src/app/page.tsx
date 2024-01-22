@@ -27,14 +27,12 @@ export default function Page() {
               {RESUME_DATA.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs sm:text-lg text-muted-foreground">
-              <a
+              <p
                 className="inline-flex gap-x-1.5 align-baseline leading-none"
-                href={RESUME_DATA.locationLink}
-                target="_blank"
               >
                 <GlobeIcon className="size-3 sm:size-4" />
                 {RESUME_DATA.location}
-              </a>
+              </p>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
