@@ -23,6 +23,7 @@ export const RESUME_DATA = {
   name: "Kyle Finken",
   initials: "KF",
   location: "Tampa, Florida, USA",
+  locationLink: "",
   about:
     "Recent graduate obsessed with solving problems with software. Currently looking for a full-time position as a Software Engineer.",
   summary:
