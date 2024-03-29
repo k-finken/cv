@@ -23,11 +23,10 @@ export const RESUME_DATA = {
   name: "Kyle Finken",
   initials: "KF",
   location: "Tampa, Florida, USA",
-  about:
-    "Recent graduate obsessed with solving problems with software. Currently looking for a full-time position as a Software Engineer.",
   summary:
-    "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. I'm actively seeking a new team where I can bring my skills to the table and make meaningful contributions. If you're interested in connecting or discussing potential opportunities don't hesitate to reach out!",
-  avatarUrl: "https://media.licdn.com/dms/image/D4E03AQEctLtAYZ6QVQ/profile-displayphoto-shrink_800_800/0/1705878264072?e=1711584000&v=beta&t=kNOWyIFPfIGGJGQn52w5yXhWOBjOQwH9ooVVSBnn50Q",
+    "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. If you're interested in connecting don't hesitate to reach out!",
+  avatarUrl:
+    "https://media.licdn.com/dms/image/D4E03AQEctLtAYZ6QVQ/profile-displayphoto-shrink_800_800/0/1705878264072?e=1717027200&v=beta&t=bDZddn0_F6geTWLicBnkky8Vmz246DpcBCPjX6iUJl0",
   contact: {
     email: "kfinken@finkenfive.com",
     tel: "+19529134362",
@@ -55,10 +54,20 @@ export const RESUME_DATA = {
       degree: "Bachelors of Science in Computer Engineering",
       start: "2019",
       end: "2023",
-      gpa: "3.8/4.0"
+      gpa: "3.8/4.0",
     },
   ],
   work: [
+    {
+      company: "Clari",
+      link: "https://www.clari.com/",
+      badges: [],
+      title: "Full Stack Software Engineer",
+      logo: ParabolLogo,
+      start: "04/2024",
+      end: "Current",
+      description: ``,
+    },
     {
       company: "DataBanc",
       link: "https://www.mydatabanc.com/",
@@ -66,7 +75,7 @@ export const RESUME_DATA = {
       title: "Full Stack SWE Intern",
       logo: ParabolLogo,
       start: "09/2022",
-      end: "Current",
+      end: "03/2024",
       description: `• Rapidly advanced from intern to a key contributor, gaining trust and responsibility in full-feature development and high-impact projects, collaborating directly with the CEO on marketing and strategy initiatives.
       • Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and Docker. Ultimately enabling users to have interactive, data-driven conversations. 
       • Optimized existing Express.js APIs, achieving 86% faster performance, enhancing user experience, and reducing operational costs
@@ -98,15 +107,7 @@ export const RESUME_DATA = {
       • Implemented regression testing suites with Selenium that were run following deployments.`,
     },
   ],
-  languages: [
-    "JavaScript",
-    "TypeScript",
-    "C++",
-    "C#",
-    "Java",
-    "Python",
-    "SQL",
-  ],
+  languages: ["JavaScript", "TypeScript", "C++", "C#", "Java", "Python", "SQL"],
   skills: [
     "React/Next.js/Gatsby",
     "Node.js",
@@ -149,7 +150,8 @@ export const RESUME_DATA = {
         "Firebase",
         "Langchain",
       ],
-      description: "Data privacy and security platform for consumers to control, use, and monetize their data.",
+      description:
+        "Data privacy and security platform for consumers to control, use, and monetize their data.",
       logo: ConsultlyLogo,
       link: {
         label: "mydatabanc.com",
@@ -167,7 +169,8 @@ export const RESUME_DATA = {
         "Prisma",
         "MySQL",
       ],
-      description: "Competitive programming platform for students to practice and compete against each other.",
+      description:
+        "Competitive programming platform for students to practice and compete against each other.",
       logo: ConsultlyLogo,
     },
     {
@@ -194,12 +197,20 @@ export const RESUME_DATA = {
         "TailwindCSS",
         "Firebase",
       ],
-      description: "Tool for students to interactively learn about climate change.",
+      description:
+        "Tool for students to interactively learn about climate change.",
       logo: ConsultlyLogo,
     },
     {
       title: "Motion Based Tetris",
-      techStack: ["Team Lead", "Python", "Mediapipe", "Opencv", "Pygame", "Tensorflow"],
+      techStack: [
+        "Team Lead",
+        "Python",
+        "Mediapipe",
+        "Opencv",
+        "Pygame",
+        "Tensorflow",
+      ],
       description:
         "Tetris implementation using real-time hand tracking and gesture recognition.",
       logo: CDGOLogo,

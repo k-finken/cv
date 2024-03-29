@@ -7,6 +7,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name}`,
@@ -17,19 +18,29 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-5xl space-y-8 bg-white print:space-y-6">
-        <span className="block sm:hidden -mb-5 mt-3">
+        <span className="-mb-5 mt-3 block sm:hidden">
           <h1 className="text-5xl font-bold">{RESUME_DATA.name}</h1>
         </span>
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-2">
-            <h1 className="text-3xl sm:text-8xl font-bold hidden sm:block">{RESUME_DATA.name}</h1>
-            <p className="max-w-lg text-pretty font-mono text-sm sm:text-2xl text-muted-foreground">
-              {RESUME_DATA.about}
-            </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs sm:text-lg text-muted-foreground">
-              <p
-                className="inline-flex gap-x-1.5 align-baseline leading-none"
+            <h1 className="hidden text-3xl font-bold sm:block sm:text-8xl">
+              {RESUME_DATA.name}
+            </h1>
+            <p className="max-w-lg text-pretty font-mono text-sm text-muted-foreground sm:text-2xl">
+              Recent graduate obsessed with solving problems with software.{" "}
+              {"I'm "}
+              currently working for{" "}
+              <Link
+                target="_blank"
+                className="hover:underline"
+                href={"https://www.clari.com/"}
               >
+                Clari
+              </Link>{" "}
+              as a Full Stack Software Engineer.
+            </p>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground sm:text-lg">
+              <p className="inline-flex gap-x-1.5 align-baseline leading-none">
                 <GlobeIcon className="size-3 sm:size-4" />
                 {RESUME_DATA.location}
               </p>
@@ -93,13 +104,13 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl sm:text-3xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm sm:text-lg text-muted-foreground">
+          <h2 className="text-xl font-bold sm:text-3xl">About</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground sm:text-lg">
             {RESUME_DATA.summary}
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl sm:text-3xl font-bold">Work Experience</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -122,16 +133,16 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm sm:text-xl tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500 sm:text-xl">
                       {work.start} - {work.end}
                     </div>
                   </div>
 
-                  <h4 className="font-mono sm:text-lg text-sm leading-none">
+                  <h4 className="font-mono text-sm leading-none sm:text-lg">
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs sm:text-lg whitespace-pre-line">
+                <CardContent className="mt-2 whitespace-pre-line text-xs sm:text-lg">
                   {work.description}
                 </CardContent>
               </Card>
@@ -139,7 +150,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl sm:text-3xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -148,44 +159,62 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm sm:text-xl tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-gray-500 sm:text-xl">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2 sm:text-lg">{education.degree}</CardContent>
-                <CardContent className="mt-2 sm:text-lg">GPA: {education.gpa}</CardContent>
+                <CardContent className="mt-2 sm:text-lg">
+                  {education.degree}
+                </CardContent>
+                <CardContent className="mt-2 sm:text-lg">
+                  GPA: {education.gpa}
+                </CardContent>
               </Card>
             );
           })}
         </Section>
         <Section>
-          <h2 className="text-xl sm:text-2xl font-bold">Languages</h2>
+          <h2 className="text-xl font-bold sm:text-2xl">Languages</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.languages.map((language) => {
-              return <Badge className="sm:text-sm" key={language}>{language}</Badge>;
+              return (
+                <Badge className="sm:text-sm" key={language}>
+                  {language}
+                </Badge>
+              );
             })}
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl sm:text-2xl font-bold">Frameworks and Libraries</h2>
+          <h2 className="text-xl font-bold sm:text-2xl">
+            Frameworks and Libraries
+          </h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge className="sm:text-sm" key={skill}>{skill}</Badge>;
+              return (
+                <Badge className="sm:text-sm" key={skill}>
+                  {skill}
+                </Badge>
+              );
             })}
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl sm:text-2xl font-bold">Tools</h2>
+          <h2 className="text-xl font-bold sm:text-2xl">Tools</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.tools.map((tool) => {
-              return <Badge className="sm:text-sm" key={tool}>{tool}</Badge>;
+              return (
+                <Badge className="sm:text-sm" key={tool}>
+                  {tool}
+                </Badge>
+              );
             })}
           </div>
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl sm:text-3xl font-bold">Projects</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
@@ -201,7 +230,7 @@ export default function Page() {
           </div>
         </Section>
         <Section className="print-force-new-page scroll-mb-16">
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <h2 className="text-xs ">© 2024 Kyle Finken</h2>
           </div>
         </Section>
