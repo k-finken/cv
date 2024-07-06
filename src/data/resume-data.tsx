@@ -25,8 +25,7 @@ export const RESUME_DATA = {
   location: "Tampa, Florida, USA",
   summary:
     "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. If you're interested in connecting don't hesitate to reach out!",
-  avatarUrl:
-    "https://media.licdn.com/dms/image/D4E03AQEctLtAYZ6QVQ/profile-displayphoto-shrink_800_800/0/1705878264072?e=1717027200&v=beta&t=bDZddn0_F6geTWLicBnkky8Vmz246DpcBCPjX6iUJl0",
+  avatarUrl: "https://kylefinken.com/graduation%20pic.jpg",
   contact: {
     email: "kfinken@finkenfive.com",
     tel: "+19529134362",
