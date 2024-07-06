@@ -7,6 +7,8 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import Image from "next/image";
+import GradPhoto from "../images/graduationphoto.jpg";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -99,7 +101,7 @@ export default function Page() {
           </div>
 
           <Avatar className="size-40 sm:size-80">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+            <Image alt={RESUME_DATA.name} src={GradPhoto} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
