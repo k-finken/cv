@@ -22,7 +22,7 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "Kyle Finken",
   initials: "KF",
-  location: "Tampa, Florida, USA",
+  location: "Seattle, WA, USA",
   summary:
     "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. If you're interested in connecting don't hesitate to reach out!",
   avatarUrl: "https://kylefinken.com/graduation%20pic.jpg",
