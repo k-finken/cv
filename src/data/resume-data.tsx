@@ -17,9 +17,89 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
 } from "@/images/logos";
+import type { ComponentType, SVGProps } from "react";
+import type { StaticImageData } from "next/image";
+
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
-export const RESUME_DATA = {
+type GalleryImageItem = {
+  type: "image";
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption?: string;
+};
+
+type GalleryVideoItem = {
+  type: "video";
+  embedUrl: string;
+  title: string;
+  caption?: string;
+};
+
+type GalleryItem = GalleryImageItem | GalleryVideoItem;
+
+type ProjectLink = {
+  href: string;
+  label?: string;
+};
+
+type ResumeProject = {
+  title: string;
+  slug: string;
+  techStack: string[];
+  description: string;
+  logo: StaticImageData;
+  link?: ProjectLink;
+  gallery?: GalleryItem[];
+};
+
+type WorkExperience = {
+  company: string;
+  link?: string;
+  badges: string[];
+  title: string;
+  logo: StaticImageData;
+  start: string;
+  end: string;
+  description: string;
+};
+
+type SocialLink = {
+  name: string;
+  url: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+};
+
+type Education = {
+  school: string;
+  degree: string;
+  start: string;
+  end: string;
+  gpa?: string;
+};
+
+type ResumeData = {
+  name: string;
+  initials: string;
+  location: string;
+  summary: string;
+  avatarUrl: string;
+  contact: {
+    email?: string;
+    tel?: string;
+    social: SocialLink[];
+  };
+  education: Education[];
+  work: WorkExperience[];
+  languages: string[];
+  skills: string[];
+  tools: string[];
+  projects: ResumeProject[];
+};
+
+export const RESUME_DATA: ResumeData = {
   name: "Kyle Finken",
   initials: "KF",
   location: "Seattle, WA, USA",
@@ -277,4 +357,4 @@ export const RESUME_DATA = {
       ],
     },
   ],
-} as const;
+};

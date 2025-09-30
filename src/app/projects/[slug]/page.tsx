@@ -8,8 +8,11 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
 
+type Project = (typeof RESUME_DATA.projects)[number];
+
 const projectsWithGallery = RESUME_DATA.projects.filter(
-  (project) => project.slug && project.gallery?.length,
+  (project): project is Project & { gallery: NonNullable<Project["gallery"]> } =>
+    Boolean(project.slug && project.gallery && project.gallery.length > 0),
 );
 
 const getProjectBySlug = (slug: string) =>
@@ -17,7 +20,7 @@ const getProjectBySlug = (slug: string) =>
 
 export function generateStaticParams() {
   return projectsWithGallery.map((project) => ({
-    slug: project.slug!,
+    slug: project.slug,
   }));
 }
 
@@ -47,7 +50,7 @@ export default function ProjectGalleryPage({
 }) {
   const project = getProjectBySlug(params.slug);
 
-  if (!project || !project.gallery?.length) {
+  if (!project || !project.gallery || project.gallery.length === 0) {
     notFound();
   }
 
