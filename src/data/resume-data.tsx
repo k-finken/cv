@@ -78,13 +78,9 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       start: "09/2022",
       end: "03/2024",
-      description: `•Quickly evolved from intern to a vital contributor, gaining trust and responsibility in key projects.
-                      *Worked directly with the CEO on technology, marketing, and strategy initiatives, which included conducting campus interviews and creating social campaign assets and demos*.
-                    •Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React,
-                      Langchain, PostgreSQL, and GCP. *Ultimately enabling users to have natural language conversations with
-                      their personal data*.
-                    •Optimized existing Express.js REST APIs, *achieving 86% faster performance*, enhancing user experience,
-                      and reducing operational costs.`,
+      description: `•Quickly evolved from intern to a vital contributor, gaining trust and responsibility in key projects. *Worked directly with the CEO on technology, marketing, and strategy initiatives, which included conducting campus interviews and creating social campaign assets and demos*.
+                    •Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and GCP. *Ultimately enabling users to have natural language conversations with their personal data*.
+                    •Optimized existing Express.js REST APIs, *achieving 86% faster performance*, enhancing user experience, and reducing operational costs.`,
     },
     {
       company: "Publix Supermarkets",
@@ -95,8 +91,7 @@ export const RESUME_DATA = {
       start: "05/2022",
       end: "08/2022",
       description: `•Led the development and launch of trending searches, *attracting over 30,000 users on the first day*.
-                    •Introduced API enhancements to promote selected products on search result pages with Vue.js and .NET,
-                      *boosting user search engagement by 10%.*`,
+                    •Introduced API enhancements to promote selected products on search result pages with Vue.js and .NET, *boosting user search engagement by 10%.*`,
     },
     {
       company: "Publix Supermarkets",
