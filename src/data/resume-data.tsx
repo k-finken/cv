@@ -149,6 +149,7 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "DataBanc",
+      slug: "databanc",
       techStack: [
         "Full Stack SWE Intern",
         "Javascript",
@@ -166,9 +167,36 @@ export const RESUME_DATA = {
         label: "mydatabanc.com",
         href: "https://www.mydatabanc.com/",
       },
+      gallery: [
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+          alt: "Team reviewing analytics dashboards on laptops.",
+          width: 1600,
+          height: 900,
+          caption: "Customer privacy dashboards built with Gatsby and TailwindCSS.",
+        },
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1483478550801-78146024c39a?auto=format&fit=crop&w=1600&q=80",
+          alt: "Developer configuring a secure cloud environment.",
+          width: 1600,
+          height: 900,
+          caption: "Infrastructure automation powering DataBanc's secure deployments.",
+        },
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1600267165477-1c2d3a17f5c1?auto=format&fit=crop&w=1600&q=80",
+          alt: "Closeup of a mobile device showing a consent management interface.",
+          width: 1600,
+          height: 900,
+          caption: "Mobile-first consent flows designed for end-user data control.",
+        },
+      ],
     },
     {
       title: "LeetBattle",
+      slug: "leetbattle",
       techStack: [
         "Side Project",
         "Typescript",
@@ -184,6 +212,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Gatornetics",
+      slug: "gatornetics",
       techStack: [
         "Team Lead",
         "Javascript",
@@ -199,6 +228,7 @@ export const RESUME_DATA = {
     },
     {
       title: "ClimateSmart",
+      slug: "climatesmart",
       techStack: [
         "Team Lead",
         "Javascript",
@@ -212,6 +242,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Motion Based Tetris",
+      slug: "motion-based-tetris",
       techStack: [
         "Team Lead",
         "Python",
@@ -227,6 +258,23 @@ export const RESUME_DATA = {
         label: "Motion Based Tetris",
         href: "https://github.com/k-finken/Motion-Based-Tetris/tree/main",
       },
+      gallery: [
+        {
+          type: "video",
+          embedUrl: "https://www.youtube.com/embed/Tn6-PIqc4UM",
+          title: "Motion Based Tetris demo",
+          caption:
+            "Demo of the gesture-controlled gameplay loop used during our project showcase.",
+        },
+        {
+          type: "image",
+          src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+          alt: "Developer testing motion controls in front of a monitor displaying Tetris.",
+          width: 1600,
+          height: 900,
+          caption: "Fine-tuning Mediapipe gesture recognition for reliable block placement.",
+        },
+      ],
     },
   ],
 } as const;
