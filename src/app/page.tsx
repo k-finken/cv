@@ -117,7 +117,9 @@ export default function Page() {
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold sm:text-3xl">Work Experience</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">
+            Where I&apos;ve worked
+          </h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={`${work.company}-${work.start}`}>
@@ -176,10 +178,14 @@ export default function Page() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2 sm:text-lg">
-                  {education.degree}
+                  <strong>{education.degree}</strong>
                 </CardContent>
                 <CardContent className="mt-2 sm:text-lg">
-                  GPA: {education.gpa}
+                  <strong>GPA:</strong> {education.gpa}
+                </CardContent>
+                <CardContent className="mt-2 sm:text-lg">
+                  <strong>Relevant Coursework:</strong> Operating Systems,
+                  Computer Architecture, Databases
                 </CardContent>
               </Card>
             );
