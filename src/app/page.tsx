@@ -10,6 +10,7 @@ import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
 import GradPhoto from "../images/graduationphoto.jpg";
 import Link from "next/link";
+import { parseBoldText } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name}`,
@@ -28,25 +29,25 @@ export default function Page() {
             <h1 className="hidden text-3xl font-bold sm:block sm:text-8xl">
               {RESUME_DATA.name}
             </h1>
-            <p className="max-w-lg text-pretty font-mono text-sm text-muted-foreground sm:text-2xl">
-              Recent graduate obsessed with solving problems with software.{" "}
-              {"I'm "}
-              currently working for{" "}
+            <p className="max-w-lg text-pretty pt-4 font-mono text-sm text-muted-foreground sm:text-2xl">
+              I&apos;m Kyle, a full stack software engineer at{" "}
               <Link
                 target="_blank"
-                className="hover:underline"
+                className="underline"
                 href={"https://www.clari.com/"}
+                key="clari_link"
               >
                 Clari
-              </Link>{" "}
-              as a Full Stack Software Engineer.
+              </Link>
+              , where I&apos;m working on building the future of AI-powered
+              sales and revenue intelligence.
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground sm:text-lg">
+            <span className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground sm:text-lg">
               <p className="inline-flex gap-x-1.5 align-baseline leading-none">
                 <GlobeIcon className="size-3 sm:size-4" />
                 {RESUME_DATA.location}
               </p>
-            </p>
+            </span>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
@@ -55,7 +56,11 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                  <a
+                    target="_blank"
+                    href={`mailto:${RESUME_DATA.contact.email}`}
+                    key="email_link"
+                  >
                     <MailIcon className="size-4 sm:size-6" />
                   </a>
                 </Button>
@@ -67,7 +72,7 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  <a target="_blank" href={`tel:${RESUME_DATA.contact.tel}`}>
                     <PhoneIcon className="size-4 sm:size-6" />
                   </a>
                 </Button>
@@ -80,7 +85,7 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={social.url}>
+                  <a target="_blank" href={social.url}>
                     <social.icon className="size-4 sm:size-6" />
                   </a>
                 </Button>
@@ -88,12 +93,12 @@ export default function Page() {
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                <a target="_blank" href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
               {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                <a target="_blank" href={`tel:${RESUME_DATA.contact.tel}`}>
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
@@ -106,20 +111,24 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold sm:text-3xl">About</h2>
+          <h2 className="text-xl font-bold sm:text-3xl">A blurb about me</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground sm:text-lg">
-            {RESUME_DATA.summary}
+            {parseBoldText(RESUME_DATA.summary)}
           </p>
         </Section>
         <Section>
           <h2 className="text-xl font-bold sm:text-3xl">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
-              <Card key={work.company}>
+              <Card key={`${work.company}-${work.start}`}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base sm:text-xl">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                      <a
+                        key={work.company + "_link"}
+                        className="hover:underline"
+                        href={work.link}
+                      >
                         {work.company}
                       </a>
 
@@ -145,7 +154,7 @@ export default function Page() {
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 whitespace-pre-line text-xs sm:text-lg">
-                  {work.description}
+                  {parseBoldText(work.description)}
                 </CardContent>
               </Card>
             );

@@ -1,21 +1,9 @@
 import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
   CDGOLogo,
   ClevertechLogo,
   ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
   JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
   ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
@@ -23,8 +11,9 @@ export const RESUME_DATA = {
   name: "Kyle Finken",
   initials: "KF",
   location: "Seattle, WA, USA",
-  summary:
-    "Hey! I'm Kyle Finken, a Computer Engineering graduate from the University of Florida. I have a burning passion for building innovative software solutions to tackle real-world challenges, and doing it quickly. I have extensive experience developing for the web and thrive in fast-paced agile work environments where I can wear a ton of hats and learn something new everyday. If you're interested in connecting don't hesitate to reach out!",
+  summary: `I graduated from the University of Florida in December, 2023 with my bachelors in Computer Engineering (3.8/4.0). 
+            *I heavily prefer strongly typed languages (TS & Go are my personal favorites), I don't like TDD, I like to iterate very quickly (131 wpm monkeytype),
+             and I love to cook for my loved ones.*`,
   avatarUrl: "https://kylefinken.com/graduation%20pic.jpg",
   contact: {
     email: "kfinken@finkenfive.com",
@@ -65,7 +54,9 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       start: "02/2025",
       end: "Current",
-      description: ``,
+      description: `•*Rapid promotion to SWE II (~8 months)* recognized for outsized impact, and stellar execution.
+                    •*Developer lead for Enhanced Analytics*, multi-quarter initiative to completely replace the legacy analytics product. *Built 64 new charts/displays*, e2e automated UI tests, onboarding/training documentation, detailed monitoring and session replay capabilities, and access control implementation.
+                    •*Owned and scaled the Activity Capture service processing ~1.9M emails/wk & 4.3M events/wk*; cut p99 from ~4.5 min → 30s and p90 33s → 3s, remedied N+1s, and resolved customer support issues.`,
     },
     {
       company: "Clari",
@@ -75,20 +66,25 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       start: "04/2024",
       end: "02/2025",
-      description: ``,
+      description: `•Implemented Activity Summaries for the Groove extension, AI-generated high-level recaps of recent emails, calls, or opportunities *utilized weekly by ~20% of SDRs, Managers, and AEs*.
+                   •Developed a unified Contact Capture system for Clari and Groove, implementing and architecting an internal resync API used by other internal teams to sync activities.
+                   •*Host of Clari Tech Talks™* a forum for all Clari engineers where teams share project developments, discuss new technical developments, and showcase wins and challenges.`,
     },
     {
       company: "DataBanc",
-      link: "https://www.mydatabanc.com/",
+      link: "https://databanc-dev.web.app/",
       badges: [],
       title: "Full Stack SWE Intern",
       logo: ParabolLogo,
       start: "09/2022",
       end: "03/2024",
-      description: `• Rapidly advanced from intern to a key contributor, gaining trust and responsibility in full-feature development and high-impact projects, collaborating directly with the CEO on marketing and strategy initiatives.
-      • Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and Docker. Ultimately enabling users to have interactive, data-driven conversations. 
-      • Optimized existing Express.js APIs, achieving 86% faster performance, enhancing user experience, and reducing operational costs
-      • Developed a database security testing suite with Jest. Improving code quality and minimizing vulnerabilities in production`,
+      description: `•Quickly evolved from intern to a vital contributor, gaining trust and responsibility in key projects.
+                      *Worked directly with the CEO on technology, marketing, and strategy initiatives, which included conducting campus interviews and creating social campaign assets and demos*.
+                    •Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React,
+                      Langchain, PostgreSQL, and GCP. *Ultimately enabling users to have natural language conversations with
+                      their personal data*.
+                    •Optimized existing Express.js REST APIs, *achieving 86% faster performance*, enhancing user experience,
+                      and reducing operational costs.`,
     },
     {
       company: "Publix Supermarkets",
@@ -98,9 +94,9 @@ export const RESUME_DATA = {
       logo: ClevertechLogo,
       start: "05/2022",
       end: "08/2022",
-      description: `• Spearheaded the development of a trending search feature, tripling specific search term usage and benefiting over 30,000 users.
-      • Implemented new API enhancements enabling the promotion of select products on search result pages, utilizing Vue.js and .NET, resulting in a 10% increase in user search engagement. 
-      • Composed extensive A/B tests on new features using Adobe Analytics and Optimizely to refine user engagement and conversion rates.`,
+      description: `•Led the development and launch of trending searches, *attracting over 30,000 users on the first day*.
+                    •Introduced API enhancements to promote selected products on search result pages with Vue.js and .NET,
+                      *boosting user search engagement by 10%.*`,
     },
     {
       company: "Publix Supermarkets",
@@ -110,15 +106,24 @@ export const RESUME_DATA = {
       logo: JojoMobileLogo,
       start: "05/2021",
       end: "08/2021",
-      description: `• Revamped .NET APIs using C# to integrate advanced fallback search logic, decreasing no-result landing
-      pages by 64%.
-      • Collaborated with the UX/UI team to expand the existing Storybook component explorer system. 
-      • Implemented regression testing suites with Selenium that were run following deployments.`,
+      description: `•Revamped .NET APIs using C# to integrate advanced fallback search logic, *decreasing no-result landing pages by 64%*.
+                     •Collaborated with the UX/UI team to expand the existing Storybook component explorer system.`,
     },
   ],
-  languages: ["JavaScript", "TypeScript", "C++", "C#", "Java", "Python", "SQL"],
+  languages: [
+    "JavaScript",
+    "TypeScript",
+    "Ruby",
+    "C++",
+    "Golang",
+    "HTML",
+    "CSS",
+    "Python",
+    "SQL",
+  ],
   skills: [
     "React/Next.js/Gatsby",
+    "Ruby on Rails",
     "Node.js",
     "Express.js",
     ".NET",
@@ -136,6 +141,10 @@ export const RESUME_DATA = {
   ],
   tools: [
     "Google Cloud Platform",
+    "Heroku",
+    "AWS",
+    "Figma",
+    "Supabase",
     "Firebase",
     "Docker",
     "Git",
@@ -143,7 +152,6 @@ export const RESUME_DATA = {
     "Azure DevOps",
     "Postman",
     "Linux",
-    "Adobe Analytics",
     "Storybook",
   ],
   projects: [
@@ -164,23 +172,29 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       link: {
         label: "mydatabanc.com",
-        href: "https://www.mydatabanc.com/",
+        href: "https://databanc-dev.web.app/",
       },
     },
     {
-      title: "LeetBattle",
-      techStack: [
-        "Side Project",
-        "Typescript",
-        "TRPC",
-        "Next.js",
-        "TailwindCSS",
-        "Prisma",
-        "MySQL",
-      ],
-      description:
-        "Competitive programming platform for students to practice and compete against each other.",
+      title: "ListenLabs Berghain Challenge",
+      techStack: ["Python"],
+      description: `Finished in the top 1% (404 out of 45,000+ entries) of the Listen Labs coding challenge. Designed and 
+implemented an efficient algorithm to optimize decision-making and meet rejection targets.`,
       logo: ConsultlyLogo,
+      link: {
+        label: "berghain.challenges.listenlabs.ai",
+        href: "https://berghain.challenges.listenlabs.ai/",
+      },
+    },
+    {
+      title: "Poke MCP Challenge",
+      techStack: ["Python", "FastMCP"],
+      description: `Built todoist MCP agent to allow poke from interaction to interact with my todoist tasks.`,
+      logo: ConsultlyLogo,
+      link: {
+        label: "interaction.co/HackMIT",
+        href: "https://interaction.co/HackMIT",
+      },
     },
     {
       title: "Gatornetics",
