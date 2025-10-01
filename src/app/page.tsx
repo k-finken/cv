@@ -246,6 +246,13 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <Section className="scroll-mb-16">
+          <div className="text-center">
+            <Link href="/blog" className="text-blue-600 hover:underline text-lg">
+              Read my blog
+            </Link>
+          </div>
+        </Section>
         <Section className="print-force-new-page scroll-mb-16">
           <div className="flex items-center justify-center">
             <h2 className="text-xs ">© 2024 Kyle Finken</h2>
