@@ -55,8 +55,8 @@ export const RESUME_DATA = {
       start: "02/2025",
       end: "Current",
       description: `•*Rapid promotion to SWE II (~8 months)* recognized for outsized impact, and stellar execution.
-                    •*Developer lead for Enhanced Analytics*, multi-quarter initiative to completely replace the legacy analytics product. *Built 64 new charts/displays*, e2e automated UI tests, onboarding/training documentation, detailed monitoring and session replay capabilities, and access control implementation.
-                    •*Owned and scaled the Activity Capture service processing ~1.9M emails/wk & 4.3M events/wk*; cut p99 from ~4.5 min → 30s and p90 33s → 3s, remedied N+1s, and resolved customer support issues.`,
+                    •*Lead engineer for Enhanced Analytics* - complete rewrite of the legacy analytics product. Shipped 64 new visualizations, end-to-end load/UI tests, observability tooling, and a natural-language analytics chat. *Cited in $2.7M+ renewals*.
+                    •Owned and maintained Activity Capture - core email/calendar ingestion pipeline powering downstream services processing *~1.9M emails and 4.3M events per week*. Cut latency ~91%, resolved high-impact edge cases, and developed inbox-concurrency controls.`,
     },
     {
       company: "Clari",
@@ -66,27 +66,37 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       start: "04/2024",
       end: "02/2025",
-      description: `•Implemented Activity Summaries for the Groove extension, AI-generated high-level recaps of recent emails, calls, or opportunities *utilized weekly by ~20% of SDRs, Managers, and AEs*.
-                   •Developed a unified Contact Capture system for Clari and Groove, implementing and architecting an internal resync API used by other internal teams to sync activities.
-                   •*Host of Clari Tech Talks™* a forum for all Clari engineers where teams share project developments, discuss new technical developments, and showcase wins and challenges.`,
+      description: `•Led the development of Activity Summaries for the Groove extension, AI-generated high-level recaps of recent emails, calls, or sales opportunities. *Utilized weekly by 40,000+ users*.
+                   •Architected an internal API for unifying activity capture (email and calendar event ingestion) across Clari and Groove services, *serving 100k+ requests/day*.
+                   •*Founded and host Clari Tech Talks, a company-wide forum regularly drawing 100+ engineers* to share project developments, technical learnings, and discuss wins and challenges.`,
     },
     {
       company: "DataBanc",
       link: "https://databanc-dev.web.app/",
       badges: [],
-      title: "Full Stack SWE Intern",
+      title: "Full-Stack Software Engineer (Founding Team)",
+      logo: ParabolLogo,
+      start: "05/2023",
+      end: "04/2024",
+      description: `•*Quickly promoted from intern to founding team engineer*, leading core features and cross-functional projects; worked directly with the CEO on product, marketing, and strategy—conducting campus user interviews and producing social campaign assets and demo videos.
+                    •Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and GCP. *Ultimately enabling users to have natural language conversations with their personal data*.`,
+    },
+    {
+      company: "DataBanc",
+      link: "https://databanc-dev.web.app/",
+      badges: [],
+      title: "Full-Stack Software Engineering Intern (Founding Team)",
       logo: ParabolLogo,
       start: "09/2022",
       end: "03/2024",
-      description: `•Quickly evolved from intern to a vital contributor, gaining trust and responsibility in key projects. *Worked directly with the CEO on technology, marketing, and strategy initiatives, which included conducting campus interviews and creating social campaign assets and demos*.
-                    •Engineered comprehensive AI feature set, including embeddings and related infrastructure, using React, Langchain, PostgreSQL, and GCP. *Ultimately enabling users to have natural language conversations with their personal data*.
-                    •Optimized existing Express.js REST APIs, *achieving 86% faster performance*, enhancing user experience, and reducing operational costs.`,
+      description: `•Built headless ingest pipelines using Puppeteer to submit CCPA data requests on users' behalf, removing manual forms and follow-ups.
+                    •Optimized existing REST API's, *cutting latency by 86%*, enhancing user experience, and reducing operational costs.`,
     },
     {
       company: "Publix Supermarkets",
       link: "https://www.publix.com/",
       badges: [],
-      title: "Software Engineering Intern",
+      title: "Software Engineering Intern (Search)",
       logo: ClevertechLogo,
       start: "05/2022",
       end: "08/2022",
@@ -97,7 +107,7 @@ export const RESUME_DATA = {
       company: "Publix Supermarkets",
       link: "https://www.publix.com/",
       badges: [],
-      title: "Software Engineering Intern",
+      title: "Software Engineering Intern (Search)",
       logo: JojoMobileLogo,
       start: "05/2021",
       end: "08/2021",

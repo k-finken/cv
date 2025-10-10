@@ -183,10 +183,6 @@ export default function Page() {
                 <CardContent className="mt-2 sm:text-lg">
                   <strong>GPA:</strong> {education.gpa}
                 </CardContent>
-                <CardContent className="mt-2 sm:text-lg">
-                  <strong>Relevant Coursework:</strong> Operating Systems,
-                  Computer Architecture, Databases
-                </CardContent>
               </Card>
             );
           })}
