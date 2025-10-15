@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
-import GradPhoto from "../images/graduationphoto.jpg";
+import ProfessionalPhoto from "../images/ProfessionalPhoto.jpg";
 import Link from "next/link";
 import { parseBoldText } from "@/lib/utils";
 
@@ -106,7 +106,12 @@ export default function Page() {
           </div>
 
           <Avatar className="size-40 sm:size-80">
-            <Image alt={RESUME_DATA.name} src={GradPhoto} />
+            <Image
+              alt={RESUME_DATA.name}
+              src={ProfessionalPhoto}
+              fill
+              className="object-cover"
+            />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
